@@ -38,22 +38,22 @@ map.on('load', function() {
             // https://www.mapbox.com/mapbox-gl-js/style-spec/#expressions
 
             // Get the fill-extrusion-color from the source 'color' property.
-            'fill-extrusion-color':{
-                'property': 'White',
-                "stops":[
-                    [0,'black'],
-                    [1000, 'orange']
-                    ]
-            }
+            //'fill-extrusion-color':{
+            //    'property': 'White',
+              //  "stops":[
+                //    [0,'black'],
+                  //  [1000, 'orange']
+                    //]
+            //}
 
             // Get fill-extrusion-height from the source 'height' property.
-            'fill-extrusion-height': {
-                    'property': 'White',
-                    "stops":[
-                    [0.2,0],
-                    [1,65535]
-                    ]
-            }
+            //'fill-extrusion-height': {
+              //      'property': 'White',
+                //    "stops":[
+                  //  [0.2,0],
+                    //[1,65535]
+                    //]
+            //}
 
             // Get fill-extrusion-base from the source 'base_height' property.
             'fill-extrusion-base': ['get', 'base_height'],
