@@ -33,32 +33,22 @@ map.on('load', function() {
         	'type': 'geojson',
         	'data': data
         },
-            'paint': {
-                'fill-extrusion-color' : {
-                    'property': 'White',
-                    "stops"😞
-                    	[0, '#B2DEE6'],
-                    	[108,'#71D7BF'],
-                        [472,'#0D3D6E'],
-                        [1900,'#380862'],
-                        [4000,'#0D0D6E'],
-                        [6000,'#6500BD']
-                    ]
-                    
-                },
-                'fill-extrusion-height' : {
-                    'property': 'blue_1',
-                    "stops"😞
-                    	[0, 0],
-                    	[61, 6100],
-                        [121, 12100],
-                        [240, 24000],
-                        [787, 78700],
-                        [2100,210000]
-                    ]
-                },
-                 'fill-extrusion-opacity': 0.9
-            }
+        'paint': {
+            // See the Mapbox Style Specification for details on data expressions.
+            // https://www.mapbox.com/mapbox-gl-js/style-spec/#expressions
+
+            // Get the fill-extrusion-color from the source 'color' property.
+            'fill-extrusion-color': ['get', 'color'],
+
+            // Get fill-extrusion-height from the source 'height' property.
+            'fill-extrusion-height': ['get', 'height'],
+
+            // Get fill-extrusion-base from the source 'base_height' property.
+            'fill-extrusion-base': ['get', 'base_height'],
+
+            // Make extrusions slightly opaque for see through indoor walls.
+            'fill-extrusion-opacity': 0.5
+        }
     });
 });
 </script>
