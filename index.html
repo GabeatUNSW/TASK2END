@@ -61,55 +61,11 @@ map.on('load', function() {
                         [2100,210000]
                     ]
                 },
-                 'fill-extrusion-opacity': 1
+                 'fill-extrusion-opacity': 0.9
         }
     });
 });
     
-var maptwo = new mapboxgl.Map({
-    container: 'map2', // container id
-    style: 'mapbox://styles/mapbox/light-v9', // stylesheet location
-    center: [151.004105, -33.813002], // starting position [lng, lat]
-    pitch: 45,
-    bearing: -17.6,
-    zoom: 9 // starting zoom
-});
-maptwo.on('load', function() {
-    maptwo.addLayer({
-        "id": "data2",
-        "type": "fill-extrusion",
-        "source": {
-        	'type': 'geojson',
-        	'data': data2
-        },
-        'paint': {
- 'fill-extrusion-color' : {
-                    'property': 'White',
-                    "stops": [
-                    	[0, '#B2DEE6''],
-                    	[108,'#71D7BF'],
-                        [472,'#0D3D6E'],
-                        [1900,'#380862'],
-                        [4000,'#0D0D6E'],
-                        [6000,'#6500BD']
-                    ]
-             
-                },
-                'fill-extrusion-height' : {
-                    'property': 'blue_1',
-                    "stops": [
-                    	[0, 0],
-                    	[61, 6100],
-                        [121, 12100],
-                        [240, 24000],
-                        [787, 78700],
-                        [2100,210000]
-                    ]
-                },
-                 'fill-extrusion-opacity': 1
-        }
-    });
-});    
 </script>
 
 </body>
